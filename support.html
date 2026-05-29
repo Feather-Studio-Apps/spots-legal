@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support · Spots.</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", sans-serif;
+      background: #FAFAFA;
+      color: #1a1814;
+      line-height: 1.7;
+      padding: 48px 24px 96px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #E8E4DE;
+    }
+
+    .app-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a1814;
+      margin-bottom: 4px;
+    }
+
+    .page-title {
+      font-size: 15px;
+      color: #9A9188;
+      font-weight: 400;
+    }
+
+    .contact-box {
+      background: #F0EDE8;
+      border-left: 3px solid #1a1814;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 48px;
+      font-size: 14px;
+      color: #4a4540;
+    }
+
+    .contact-box a {
+      color: #1a1814;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #9A9188;
+      margin-bottom: 12px;
+      padding-left: 2px;
+    }
+
+    .faq-group {
+      border: 1px solid #E8E4DE;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #F0EDE8;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #E8E4DE;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+    }
+
+    .faq-question span {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1a1814;
+      line-height: 1.4;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      color: #9A9188;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: #6a6560;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid #E8E4DE;
+      font-size: 13px;
+      color: #B0A89E;
+    }
+
+    .footer a {
+      color: #9A9188;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="app-name">Spots.</div>
+      <div class="page-title">Support</div>
+    </div>
+
+    <div class="contact-box">
+      Need help or have a question? Email us at <a href="mailto:featherstudio@proton.me">featherstudio@proton.me</a> — we read every message.
+    </div>
+
+    <!-- GETTING STARTED -->
+    <div class="section">
+      <div class="section-title">Getting Started</div>
+      <div class="faq-group">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>What is Spots.?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Spots. is a personal place-saving app. It's your private inbox for places you discover on social media, from friends, or anywhere else — so you never lose track of somewhere you want to go.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Do I need an account?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">No. Spots. works entirely without an account or sign-in. Just download and start saving.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Is my data private?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Completely. All your data is stored locally on your device. Nothing is sent to any server. Feather Studio has no access to your spots, visits, or any personal information.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ADDING SPOTS -->
+    <div class="section">
+      <div class="section-title">Adding Spots</div>
+      <div class="faq-group">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I add a spot?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Tap the search bar at the top of the List tab and type a place name. Results from Apple Maps will appear — tap one to add it. You can also add spots directly from the Map tab.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Can I add spots from Instagram or other apps?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Yes — use the share button in any app and select Spots. from the share sheet. A mini sheet will open where you can type the place name and search for it on Apple Maps before saving.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Can I add a place that isn't on Apple Maps?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Yes. Tap the search bar and type the place name. At the bottom of the results you'll see "Add manually" — tap it to enter a name, search for an address, or drop a pin on the map directly.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>What do the statuses mean?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Want — somewhere you'd like to go.
+Been — somewhere you've visited.
+Love — a favourite you'd go back to.
+Skip — somewhere you've been but wouldn't return to.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>What are ratings for?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Ratings let you give a spot 1–5 stars. They're personal — use them however makes sense to you. You can filter your spots by rating from the filter sheet.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ORGANISING -->
+    <div class="section">
+      <div class="section-title">Organising</div>
+      <div class="faq-group">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>What are Lists?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Lists let you group spots however you like — by trip, neighbourhood, occasion, or anything else. A spot can belong to multiple lists. Create and manage lists from Profile → Lists & Tags.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>What are Tags?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Tags are freeform labels you add to individual spots. Type a tag directly in the spot detail view. Great for things like #patio, #datenight, or #weekend. Manage tags from Profile → Lists & Tags.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I filter my spots?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Use the filter pills at the bottom of the List and Map tabs to quickly filter by status. Tap the ⊞ icon on the left to open the full filter sheet — where you can filter by status, category, list, tag, and rating, and change the sort order.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Can I reorder my lists and tags?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Yes. Go to Profile → Lists & Tags, switch to the Lists or Tags tab, and use the up/down arrows on each row to reorder. The order here matches the order they appear in the filter sheet.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- YOUR DATA -->
+    <div class="section">
+      <div class="section-title">Your Data</div>
+      <div class="faq-group">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>Where is my data stored?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Everything is stored locally on your device using SwiftData. If you have iCloud enabled on your device, your data may be included in your iCloud backup automatically.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I back up my data?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Go to Profile → Export Data. This creates a JSON file with all your spots and visits that you can save anywhere — Files, iCloud Drive, email to yourself, etc.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I transfer to a new phone?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Export your data from the old phone (Profile → Export Data), then import it on the new phone (Profile → Import Data). Note: importing replaces all existing data on the new device.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I delete everything?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Go to Profile → Delete All Data. You'll be asked to confirm before anything is deleted. This is permanent and cannot be undone.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="section">
+      <div class="section-title">Settings</div>
+      <div class="faq-group">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I change the app theme?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Go to Profile → Appearance → Theme. Choose Light, Dark, or System (follows your device setting).</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I change the map provider?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Go to Profile → Data → Map Provider. Toggle between Apple Maps and Google Maps. Google Maps must be installed on your device for the Google Maps option to work.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggle(this)">
+            <span>How do I contact support?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 6 8 10 12 6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Tap Profile → Send Feedback to email us directly at featherstudio@proton.me. We read every message.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 Feather Studio · Daren Irlen · All rights reserved &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <script>
+    function toggle(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
